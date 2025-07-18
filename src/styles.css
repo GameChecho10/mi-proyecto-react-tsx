@@ -159,128 +159,6 @@ label {
   font-size: 16px;
 }
 
-footer {
-  width: 100%;
-  display: inline-flex;
-  background-color: #fafafa;
-  min-height: 809px;
-  justify-content: center;
-  border-top: 1px solid #d8d8d8;
-  margin-top: -40px;
-  transform: translateY(20px);
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #323237;
-}
-
-button {
-  border-radius: 5px;
-  background-color: #da291c;
-  line-height: 30px;
-}
-
-select {
-  border: none;
-  border-bottom: 1px solid #979797;
-  padding: 2px;
-  margin-top: -4px;
-}
-
-.codigo-promo {
-  margin-top: 22px;
-  display: inline-flex;
-  align-items: center;
-}
-.codigo-promo > a {
-  color: #96172e;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.codigo-promo > p:nth-child(3) {
-  color: #96172e;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.codigo-promo > img {
-  width: 22px;
-  height: 22px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  text-decoration: underline;
-  margin-right: 4px;
-}
-
-.container-header {
-  width: 90%;
-  display: inline-flex;
-  align-content: center;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.splash {
-  width: 100%;
-  background-color: blue;
-  display: inline-flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.splash > img {
-  width: 100%;
-}
-
-.container-splash {
-  width: 488px;
-  height: 294px;
-  background: rgba(0, 0, 0, 0.28);
-  position: absolute;
-  margin-right: 120px;
-}
-
-.container-splash-caption {
-  position: absolute;
-  max-width: 488px;
-  display: inline-block;
-  height: 294px;
-  color: #ffffff;
-  margin-top: -41px;
-}
-
-.container-splash-caption > p {
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 52px;
-  display: block;
-  padding-left: 41px;
-}
-
-.container-splash-caption > p:nth-child(2) {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  margin-top: -20px;
-  padding-left: 41px;
-}
-
-.caption-cta {
-  display: block;
-  text-align: left;
-  margin-left: 44px;
-}
 
 .section-1 {
   width: 100%;
@@ -956,6 +834,128 @@ select {
   .menu-burger {
     display: inline-flex;
   }
+footer {
+  width: 100%;
+  display: inline-flex;
+  background-color: #fafafa;
+  min-height: 809px;
+  justify-content: center;
+  border-top: 1px solid #d8d8d8;
+  margin-top: -40px;
+  transform: translateY(20px);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #323237;
+}
+
+button {
+  border-radius: 5px;
+  background-color: #da291c;
+  line-height: 30px;
+}
+
+select {
+  border: none;
+  border-bottom: 1px solid #979797;
+  padding: 2px;
+  margin-top: -4px;
+}
+
+.codigo-promo {
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+}
+.codigo-promo > a {
+  color: #96172e;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.codigo-promo > p:nth-child(3) {
+  color: #96172e;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.codigo-promo > img {
+  width: 22px;
+  height: 22px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-right: 4px;
+}
+
+.container-header {
+  width: 90%;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.splash {
+  width: 100%;
+  background-color: blue;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.splash > img {
+  width: 100%;
+}
+
+.container-splash {
+  width: 488px;
+  height: 294px;
+  background: rgba(0, 0, 0, 0.28);
+  position: absolute;
+  margin-right: 120px;
+}
+
+.container-splash-caption {
+  position: absolute;
+  max-width: 488px;
+  display: inline-block;
+  height: 294px;
+  color: #ffffff;
+  margin-top: -41px;
+}
+
+.container-splash-caption > p {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 52px;
+  display: block;
+  padding-left: 41px;
+}
+
+.container-splash-caption > p:nth-child(2) {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: -20px;
+  padding-left: 41px;
+}
+
+.caption-cta {
+  display: block;
+  text-align: left;
+  margin-left: 44px;
+}
 
   .navbar {
     overflow: hidden;
@@ -1413,4 +1413,6 @@ footer {
   border-top: 1px solid rgba(82, 81, 81, 0.288);
   margin-top: 40px;
 }
+
+
 

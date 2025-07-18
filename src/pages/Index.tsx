@@ -231,225 +231,265 @@ const Index = () => {
         onPaymentSuccess={handlePaymentSuccess}
       />
       {/* Sección 3: Accesos directos */}
-      <section className="section-3">
-        <div className="container-acceso">
-          <h2 className='titulo'>Accesos directos</h2>
+      <section className="py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-10">
+            Accesos directos
+          </h2>
 
-          {[
-            {
-              img: avion,
-              title: 'Conozca sobre el programa',
-              desc: 'Avianca Corporate ofrece beneficios y precios especiales para empresas con viajes frecuentes.',
-              link: 'Más sobre el programa',
-              url: 'https://ayuda.avianca.com/hc/es/sections/12994143912603-Documentaci%C3%B3n'
-            },
-            {
-              img: lupa,
-              title: 'Cómo pertenecer al programa',
-              desc: 'Conoce los requerimientos mínimos para que accedas a los beneficios que ofrece Avianca Corporate',
-              link: 'Conoce más del programa',
-              url: 'https://ayuda.avianca.com/hc/es/sections/12994143912603-Documentaci%C3%B3n'
-            },
-            {
-              img: start,
-              title: 'Obtenga su contraseña web',
-              desc: 'Si aún no recibe su contraseña, o la olvidó, la puede solicitar de nuevo aquí.',
-              link: 'Solicitar contraseña',
-              url: 'https://ayuda.avianca.com/hc/es/sections/12994143912603-Documentaci%C3%B3n'
-            }
-          ].map((card, idx) => (
-            <React.Fragment key={idx}>
-              <div className="acceso-cards">
-                <div className="cards-acceso-header">
-                  <img src={card.img} alt={card.title} />
-                  <p>{card.title}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                img: avion,
+                title: 'Conozca sobre el programa',
+                desc: 'Avianca Corporate ofrece beneficios y precios especiales para empresas con viajes frecuentes.',
+                link: 'Más sobre el programa',
+                url: 'https://ayuda.avianca.com/hc/es/sections/12994143912603-Documentaci%C3%B3n'
+              },
+              {
+                img: lupa,
+                title: 'Cómo pertenecer al programa',
+                desc: 'Conoce los requerimientos mínimos para que accedas a los beneficios que ofrece Avianca Corporate',
+                link: 'Conoce más del programa',
+                url: 'https://ayuda.avianca.com/hc/es/sections/12994143912603-Documentaci%C3%B3n'
+              },
+              {
+                img: start,
+                title: 'Obtenga su contraseña web',
+                desc: 'Si aún no recibe su contraseña, o la olvidó, la puede solicitar de nuevo aquí.',
+                link: 'Solicitar contraseña',
+                url: 'https://ayuda.avianca.com/hc/es/sections/12994143912603-Documentaci%C3%B3n'
+              }
+            ].map((card, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <img src={card.img} alt={card.title} className="w-10 h-10" />
+                  <p className="font-semibold text-lg text-gray-800">{card.title}</p>
                 </div>
-                <div className="cards-acceso-body">
-                  <p>{card.desc}</p>
-                </div>
-                <div className="cards-acceso-footer">
-                  <a href="">{card.link}</a>
-                  <img src={vectorArrow} alt="Flecha" />
+                <p className="text-sm text-gray-600 mb-4">{card.desc}</p>
+                <div className="flex items-center justify-between">
+                  <a
+                    href={card.url}
+                    className="text-red-600 font-semibold hover:underline text-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {card.link}
+                  </a>
+                  <img src={vectorArrow} alt="Flecha" className="w-4 h-4" />
                 </div>
               </div>
-              {idx < 2 && <div className="separador"></div>}
-            </React.Fragment>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
-      {/* Sección 4: Ten en cuenta */}
-      <section className="section-4">
-        <div className="container-cuenta">
-          <h2 className='titulo'>Ten en cuenta</h2>
 
-          <div className="contenedor-cuenta-recuadros">
-            <div className="cuenta-recuadros">
-              <h3>Restricciones de Viajes</h3>
-              <p>Revisa si tu destino tiene restricciones de viaje o exigencias de Pruebas de Covid-19, que pueden impactar tu viaje.</p>
-              <a href="https://www.avianca.com/es/sobre-nosotros/contactanos/"
+      {/* Sección 4: Ten en cuenta */}
+      <section className="py-12 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-10">
+            Ten en cuenta
+          </h2>
+
+          {/* Recuadros pequeños */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold mb-3 text-gray-900">Restricciones de Viajes</h3>
+              <p className="text-gray-700 text-sm mb-4">
+                Revisa si tu destino tiene restricciones de viaje o exigencias de Pruebas de Covid-19, que pueden impactar tu viaje.
+              </p>
+              <a
+                href="https://www.avianca.com/es/sobre-nosotros/contactanos/"
                 target="_blank"
-                rel="noopener noreferrer"> <button className="boton-restricciones">Conocer las restricciones de viajes</button> </a>
+                rel="noopener noreferrer"
+              >
+                <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 text-sm">
+                  Conocer las restricciones de viajes
+                </button>
+              </a>
             </div>
 
-            <div className="cuenta-recuadros">
-              <h3>Habla con un Ejecutivo Comercial</h3>
-              <p>Si ya tienes una Cuenta Corporativa, puedes hablar directamente con nuestros Ejecutivos Comerciales.</p>
-              <a href="https://www.avianca.com/es/sobre-nosotros/contactanos/"
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold mb-3 text-gray-900">Habla con un Ejecutivo Comercial</h3>
+              <p className="text-gray-700 text-sm mb-4">
+                Si ya tienes una Cuenta Corporativa, puedes hablar directamente con nuestros Ejecutivos Comerciales.
+              </p>
+              <a
+                href="https://www.avianca.com/es/sobre-nosotros/contactanos/"
                 target="_blank"
-                rel="noopener noreferrer"> <button className="boton-restricciones">Conocer las restricciones de viajes</button> </a>
+                rel="noopener noreferrer"
+              >
+                <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 text-sm">
+                  Conocer las restricciones de viajes
+                </button>
+              </a>
             </div>
           </div>
 
-          <div className="cuenta-recuadro-grande">
-            <h3>Prueba PCR (Covid-19) incluida en tu tarifa </h3>
-            <p>
+          {/* Recuadro grande */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-lg font-semibold mb-3 text-gray-900">
+              Prueba PCR (Covid-19) incluida en tu tarifa
+            </h3>
+            <p className="text-gray-700 text-sm mb-4">
               Si uno de los destinos a los que viajes exige una prueba PCR para el Covid-19, nosotros te hacemos la
-              vida más fácil. Nos aliamos con SynLab para
-              que viajes tranquilo, descubre todos los beneficios que trae tu talla.
+              vida más fácil. Nos aliamos con SynLab para que viajes tranquilo, descubre todos los beneficios que trae tu talla.
             </p>
-            <a href="https://www.avianca.com/es/sobre-nosotros/contactanos/"
+            <a
+              href="https://www.avianca.com/es/sobre-nosotros/contactanos/"
               target="_blank"
-              rel="noopener noreferrer"> <button className="boton-restricciones">Conocer las restricciones de viajes</button> </a>
+              rel="noopener noreferrer"
+            >
+              <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 text-sm">
+                Conocer las restricciones de viajes
+              </button>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer>
-        <div className="container-menu-footer">
-          {[
-            {
-              title: 'Avianca Corporate',
-              links: [
-                'El programa Corporate',
-                'Inscripción',
-                'Otras soluciones empresariales',
-                'Direct Connect',
-                'Servicios de viaje',
-                'Cómo pertenecer al programa',
-                'Obtenga su contraseña web',
-                'Solicite su PIN'
-              ]
-            },
-            {
-              title: 'Conócenos',
-              links: [
-                'Sobre nosotros',
-                'Contáctanos',
-                'Alianzas y beneficios',
-                'Direct Connect',
-                'Nuestra red de servicios',
-                'Relación con inversionistas',
-                'Mapa del Sitio',
-                'Avianca Express'
-              ]
-            },
-            {
-              title: 'Legales',
-              links: [
-                'Términos y condiciones',
-                'Política de privacidad',
-                'Política de cookies',
-                'Cargos por servicios opcionales',
-                'Contrato de transporte',
-                'Plan de contingencia'
-              ]
-            }
-          ].map((section, idx) => (
-            <div className="menu-footer-cards" key={idx}>
-              <p className="titulos-menu-footer">{section.title}</p>
-              <ul className="lista-links-footer">
-                {section.links.map((link, i) => (
-                  <li key={i}><a href="#">{link}</a></li>
+      <footer className="bg-gray-100 py-12 text-sm text-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+          {/* Sección de enlaces principales */}
+       <div
+  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center text-center px-2 sm:px-12 lg:px-12 py-6 mb-2"
+  style={{ lineHeight: '2', marginTop: '-40px', marginBottom: '42px' }}
+>
+
+            {[
+              {
+                title: 'Avianca Corporate',
+                links: [
+                  'El programa Corporate',
+                  'Inscripción',
+                  'Otras soluciones empresariales',
+                  'Direct Connect',
+                  'Servicios de viaje',
+                  'Cómo pertenecer al programa',
+                  'Obtenga su contraseña web',
+                  'Solicite su PIN',
+                ],
+              },
+              {
+                title: 'Conócenos',
+                links: [
+                  'Sobre nosotros',
+                  'Contáctanos',
+                  'Alianzas y beneficios',
+                  'Direct Connect',
+                  'Nuestra red de servicios',
+                  'Relación con inversionistas',
+                  'Mapa del Sitio',
+                  'Avianca Express',
+                ],
+              },
+              {
+                title: 'Legales',
+                links: [
+                  'Términos y condiciones',
+                  'Política de privacidad',
+                  'Política de cookies',
+                  'Cargos por servicios opcionales',
+                  'Contrato de transporte',
+                  'Plan de contingencia',
+                ],
+              },
+            ].map((section, idx) => (
+              <div key={idx} className="w-full max-w-[180px]">
+                <br></br><p className="font-semibold text-gray-900 mb-3">{section.title}</p>
+                <ul className="space-y-1" style={{ lineHeight: '1.75' }}>
+                  {section.links.map((link, i) => (
+                    <li key={i}>
+                      <a href="#" className="hover:text-red-600 hover:underline">{link}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+
+          {/* Sección redes y logos */}
+          <div className="space-y-8">
+            <p className="text-lg font-semibold text-gray-900">Síguenos</p>
+
+           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+              {/* Enlaces sociales con nombre */}
+              <div className="flex flex-wrap gap-6">
+                {[
+                  {
+                    img: twitter,
+                    alt: 'Twitter',
+                    href: 'https://x.com/avianca'
+                  },
+                  {
+                    img: facebook,
+                    alt: 'Facebook',
+                    href: 'https://www.facebook.com/aviancaglobal'
+                  },
+                  {
+                    img: youtube,
+                    alt: 'YouTube',
+                    href: 'https://www.youtube.com/watch?v=feDjdS-tXqU'
+                  },
+                  {
+                    img: instagram,
+                    alt: 'Instagram',
+                    href: 'https://www.instagram.com/avianca'
+                  }
+                ].map((media, i) => (
+                  <a style={{ marginRight: '40px' }}
+                    key={i}
+                    href={media.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gray-700 hover:text-red-600"
+                  >
+                    <img src={media.img} alt={media.alt} className="w-5 h-5" />
+                    {media.alt}
+                  </a>
                 ))}
-              </ul>
-            </div>
-          ))}
+              </div>
 
-          <p className="titulos-media-footer">Síguenos</p>
-
-          <div className="container-media-footer">
-            <div className="footer-media-links">
-              {[
-                {
-                  img: twitter,
-                  alt: 'Twitter',
-                  href: 'https://x.com/avianca?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'
-                },
-                {
-                  img: facebook,
-                  alt: 'Facebook',
-                  href: 'https://www.facebook.com/aviancaglobal/?locale=es_LA'
-                },
-                {
-                  img: youtube,
-                  alt: 'YouTube',
-                  href: 'https://www.youtube.com/watch?v=feDjdS-tXqU'
-                },
-                {
-                  img: instagram,
-                  alt: 'Instagram',
-                  href: 'https://www.instagram.com/avianca/?hl=es-la'
-                }
-              ].map((media, i) => (
-                <a
-                  href={media.href}
-                  key={i}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={media.img} alt={media.alt} /> {media.alt}
+              {/* Logos de seguridad */}
+              <div className="flex flex-wrap items-center gap-4">
+                <a href="https://www.avianca.com/" target="_blank" rel="noopener noreferrer">
+                  <img src={sitioSeguro} alt="Candado" className="h-6" />
                 </a>
-              ))}
-            </div>
-
-
-            <div className="footer-media-links-2">
-              {[twitter, facebook, youtube, instagram].map((img, i) => (
-                <a href="#" key={i}>
-                  <img className="links2" src={img} alt={`media-${i}`} />
+                <a href="https://www.avianca.com/es/informacion-legal/politica-seguridad-informacion-ciberseguridad/" target="_blank" rel="noopener noreferrer">
+                  <img src={vigilado} alt="Seguridad transporte" className="h-6" />
                 </a>
-              ))}
-
-              <img src={avianca} alt="Avianca Logo" />
-            </div>
-
-            <div className="vr"></div>
-
-            <div className="footer-media-security">
-              <a href="https://www.avianca.com/" target="_blank" rel="noopener noreferrer">
-                <img src={sitioSeguro} alt="Logo Candado" />
-              </a>
-              <a href="https://www.avianca.com/es/informacion-legal/politica-seguridad-informacion-ciberseguridad/" target="_blank" rel="noopener noreferrer">
-                <img src={vigilado} alt="Logo seguridad transporte" />
-              </a>
-              <a href="https://www.avianca.com/es/sobre-nosotros/somos-avianca/" target="_blank" rel="noopener noreferrer">
-                <img src={aerona} alt="Aeronautica Logo" />
-              </a>
+                <a href="https://www.avianca.com/es/sobre-nosotros/somos-avianca/" target="_blank" rel="noopener noreferrer">
+                  <img src={aerona} alt="Aeronautica" className="h-6" />
+                </a>
+              </div>
             </div>
           </div>
 
-          <hr className="hr-azul" />
+          <hr className="border-t border-gray-300" />
 
-          <div className="container-wianca">
-            <img
-              src="/lovable-uploads/6e9dc7bc-ac85-40d6-9e30-3e25368598c4.png"
-              alt="Avianca"
-              style={{
-                height: '28px',     // equivalente a h-12
-                width: 'auto',
-                transform: 'translateY(30px)', // o cualquier otro valor
-              }}
-            />
-            <img src={alianza} alt="Alliance logo" />
-            <p>
+          {/* Info legal final */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <img
+                src="/lovable-uploads/6e9dc7bc-ac85-40d6-9e30-3e25368598c4.png"
+                alt="Avianca"
+                className="h-7"
+              />
+              <img src={alianza} alt="Alliance logo" className="h-7" />
+            </div>
+            <p className="text-center sm:text-left text-xs text-gray-600">
               Avianca S.A. - 2020 Copyright © Todos los derechos reservados.
               NIT 890.100.577-6. RNT 20175
             </p>
           </div>
         </div>
       </footer>
-
     </div>
 
   );

@@ -57,7 +57,9 @@ const Header = () => {
           </nav>
 
           {/* Controles de usuario */}
-          <div className="flex items-center space-x-3" style={{ transform: 'translateX(-120px)' }}>
+          {/* Botones visibles en escritorio, centrados en móvil */}
+         <div className="flex items-center space-x-3 justify-end pr-4 md:pr-10 mt-4 md:mt-0">
+
             <Button
               variant="ghost"
               size="sm"
@@ -78,6 +80,7 @@ const Header = () => {
               <Settings className="w-5 h-5" />
             </Button>
           </div>
+
         </div>
       </div>
     </header>
