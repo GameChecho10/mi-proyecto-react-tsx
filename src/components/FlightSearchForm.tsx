@@ -762,7 +762,7 @@ const FlightSearchForm = ({ onFlightSelect }: FlightSearchFormProps) => {
 
                       <div
                         className="text-center ml-8"
-                        style={{ transform: 'translate(-25px, 10px)', fontSize: '12px' }}
+                        style={{ transform: 'translate(-28px, 10px)', fontSize: '12px' }}
                       >
                         <div className="text-gray-500 line-through mb-1">
                           {formatPrice(flight.originalPrice)}
