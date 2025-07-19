@@ -1,5 +1,6 @@
 
 import React from 'react';
+import avionrojo from '../images/avionrojo.png';
 
 interface LoadingTransitionProps {
   message?: string;
@@ -11,7 +12,7 @@ const LoadingTransition = ({ message = "Cargando..." }: LoadingTransitionProps) 
       <div className="text-center">
         <div className="relative w-32 h-32 mx-auto mb-8">
           <img 
-            src="/lovable-uploads/33e5d30a-e80e-402c-a99f-24bc0ce75415.png" 
+            src={avionrojo}
             alt="Avión Avianca" 
             className="w-full h-full object-contain"
             style={{

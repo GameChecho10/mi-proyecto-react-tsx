@@ -478,8 +478,8 @@ const FlightSearchForm = ({ onFlightSelect }: FlightSearchFormProps) => {
             <div key={classType.id} className="border-2 border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-all hover:border-blue-300">
               <div className="text-center mb-4">
                 <h5 className={`text-xl font-bold mb-2 ${classType.color === 'red' ? 'text-red-600' :
-                    classType.color === 'purple' ? 'text-purple-600' :
-                      'text-orange-600'
+                  classType.color === 'purple' ? 'text-purple-600' :
+                    'text-orange-600'
                   }`}>{classType.name}</h5>
                 <div className="text-2xl font-bold text-gray-900 mb-3">
                   {formatPrice(Math.floor(flight.price * classType.priceMultiplier))}
@@ -497,8 +497,8 @@ const FlightSearchForm = ({ onFlightSelect }: FlightSearchFormProps) => {
               <Button
                 onClick={() => handleClassSelect(flight, classType.id, Math.floor(flight.price * classType.priceMultiplier))}
                 className={`w-full py-3 text-white font-semibold rounded-lg transition-colors ${classType.color === 'red' ? 'bg-red-600 hover:bg-red-700' :
-                    classType.color === 'purple' ? 'bg-purple-600 hover:bg-purple-700' :
-                      'bg-orange-600 hover:bg-orange-700'
+                  classType.color === 'purple' ? 'bg-purple-600 hover:bg-purple-700' :
+                    'bg-orange-600 hover:bg-orange-700'
                   }`}
               >
                 Seleccionar {classType.name}
@@ -760,18 +760,22 @@ const FlightSearchForm = ({ onFlightSelect }: FlightSearchFormProps) => {
                         </div>
                       </div>
 
-                      <div className="text-right ml-8">
-                        <div className="text-sm text-gray-500 line-through mb-1">
+                      <div
+                        className="text-center ml-8"
+                        style={{ transform: 'translate(-25px, 10px)', fontSize: '12px' }}
+                      >
+                        <div className="text-gray-500 line-through mb-1">
                           {formatPrice(flight.originalPrice)}
                         </div>
-                        <div className="text-3xl font-bold text-red-600 mb-2">
+                        <div className="font-bold text-red-600 mb-2">
                           {formatPrice(flight.price)}
                         </div>
-                        <div className="text-sm text-gray-500 mb-4">por pasajero</div>
-                        <div className="text-sm text-blue-600 font-medium">
+                        <div className="text-gray-500 mb-4">por pasajero</div>
+                        <div className="text-blue-600 font-medium">
                           {selectedFlightId === flight.id ? 'Ocultar clases ▲' : 'Ver clases ▼'}
                         </div>
                       </div>
+
                     </div>
                   </div>
 

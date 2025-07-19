@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+ import Cartagena from '../images/cartagena.png';
 
 interface FlightOffer {
   id: number;
@@ -79,7 +80,7 @@ const FlightOffersEnhanced = ({ onBookFlight }: FlightOffersEnhancedProps) => {
       duration: "1h 50m", 
       departure: "09:15",
       airline: "Avianca",
-      image: "/lovable-uploads/d74feb2c-0904-45b2-a575-654ab0ddac5b.png",
+      image: "/lovable-uploads/2bf33ddc-0e43-49ae-b3a3-02a5406913ed.png",
       originalPrice: 0,
       discountPercentage: generateDynamicDiscount(3)
     },
@@ -139,7 +140,7 @@ const FlightOffersEnhanced = ({ onBookFlight }: FlightOffersEnhancedProps) => {
       duration: "1h 10m",
       departure: "16:45",
       airline: "Avianca",
-      image: "/lovable-uploads/74f6f11b-1331-491d-96b8-865c26340c71.png",
+      image: "/lovable-uploads/CALI.jpeg", 
       originalPrice: 0,
       discountPercentage: generateDynamicDiscount(8)
     },
