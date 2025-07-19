@@ -776,7 +776,7 @@ const FlightSearchForm = ({ onFlightSelect }: FlightSearchFormProps) => {
 
                     </div>
                   </div>
-                  <div className="text-blue-600 font-medium"  style={{ transform: 'translate(118px, -20px)', fontSize: '12px' }}>
+                  <div className="text-blue-600 font-medium"  style={{ transform: 'translate(110px, -20px)', fontSize: '12px' }}>
                     {selectedFlightId === flight.id ? 'Ocultar clases ▲' : 'Ver clases ▼'}
                   </div>
                   {selectedFlightId === flight.id && renderFlightClasses(flight)}
