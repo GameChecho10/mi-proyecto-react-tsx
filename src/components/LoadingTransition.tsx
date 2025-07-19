@@ -1,6 +1,6 @@
 
 import React from 'react';
-import avionrojo from '../images/avionrojo.png';
+import avionrojo from '../images/avionRojo.png';
 
 interface LoadingTransitionProps {
   message?: string;
