@@ -762,7 +762,7 @@ const FlightSearchForm = ({ onFlightSelect }: FlightSearchFormProps) => {
 
                       <div
                         className="text-center ml-8"
-                        style={{ transform: 'translate(-28px, 10px)', fontSize: '11px' }}
+                        style={{ transform: 'translate(-38px, 35px)', fontSize: '12px' }}
                       >
                         <div className="text-gray-500 line-through mb-1">
                           {formatPrice(flight.originalPrice)}
@@ -771,14 +771,14 @@ const FlightSearchForm = ({ onFlightSelect }: FlightSearchFormProps) => {
                           {formatPrice(flight.price)}
                         </div>
                         <div className="text-gray-500 mb-4">por pasajero</div>
-                        <div className="text-blue-600 font-medium">
-                          {selectedFlightId === flight.id ? 'Ocultar clases ▲' : 'Ver clases ▼'}
-                        </div>
+
                       </div>
 
                     </div>
                   </div>
-
+                  <div className="text-blue-600 font-medium"  style={{ transform: 'translate(118px, -20px)', fontSize: '12px' }}>
+                    {selectedFlightId === flight.id ? 'Ocultar clases ▲' : 'Ver clases ▼'}
+                  </div>
                   {selectedFlightId === flight.id && renderFlightClasses(flight)}
                 </div>
               ))}
